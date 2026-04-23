@@ -121,14 +121,14 @@ export function Hero2() {
             <p className="text-[24px] text-[#E6E6E6] font-semibold text-center lg:text-start">{data.soustitrehero}</p>
             </div>
             <div className="flex flex-col lg:flex-row justify-center items-center  gap-[24px]">
-                <Link href={`tel:${data.numero}`}><Bouton>
+                <Link href={`tel:${data.numero}`} className="h-full"><Bouton className="h-full">
                         <Icon icon='material-symbols:call' width={24} height={24} className="text-white"/>
                 <p className=" text-[16px] font-semibold text-white ">Appeler Maintenant</p>
                 </Bouton>
                 </Link>
-                <Link href="#contact">
-                <SecondBouton><Icon icon='material-symbols:mail' width={24} height={24} className="text-second"/>
-                <p className=" text-[16px] font-semibold text-second ">Obtenir un devis gratuit</p></SecondBouton>
+                <Link href="#contact" className="h-full">
+                <SecondBouton className="h-full"><Icon icon='material-symbols:mail' width={24} height={24} className="text-white"/>
+                <p className=" text-[16px] font-semibold text-white ">Obtenir un devis gratuit</p></SecondBouton>
                 </Link>
             </div>
             <div className="flex px-8 py-6 bg-white/20 text-white font-semibold text-[16px] rounded-xl drop-shadow-white/20 backdrop-blur-2xl drop-shadow-2xl ">
@@ -157,7 +157,7 @@ export function Header() {
      <>
      <nav>
      <div className={`col-span-full w-full fixed px-[32px] py-[24px] top-0 left-0 z-50 flex flex-row items-center justify-between text-white transition-all duration-300 ${scrolled ? "backdrop-blur-md" : ""}`}>
-        <p className={`text-2xl text-second font-extrabold  ${aboreto.className} `}>{data.entreprise}</p>
+        <p className={`text-2xl text-[#2CC817] font-extrabold  ${aboreto.className} `}>{data.entreprise}</p>
             <div className="hidden lg:flex flex-row gap-8 text-[16px] ">
                 <Link href="#accueil"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">Accueil <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
                 <Link href="#service"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">a propos <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
@@ -167,13 +167,13 @@ export function Header() {
 
             <div className="flex flex-row gap-[16px] justify-center items-center  ">
                 <a href={`tel:${data.numero}`}>
-                <SecondBouton className="text-white absolute border-white z-[90] left-0 top-full w-full lg:w-auto bg-accent lg:bg-accent/0 lg:static">
+                <SecondBouton className="text-white absolute border-white z-[90] left-0 top-full w-full h-full  lg:w-auto bg-accent lg:bg-accent/0 lg:static">
                 <Icon icon='material-symbols:call' width={24} height={24}/>
                 <p className="font-extrabold text-[16px]  ">{data.numero}</p>
                 </SecondBouton>
                 </a>
                 <Link href="#contact">
-                <Bouton className="items-center opacity-0 lg:opacity-100 ">
+                <Bouton className="items-center opacity-0 lg:opacity-100 h-full ">
                     <Icon icon='material-symbols:mail' width={24} height={24} className="text-white"/>
                 <p className=" text-[16px] font-semibold  ">Devis gratuit</p>
                 </Bouton>
@@ -207,7 +207,7 @@ export function About() {
 
     return (
         <>
-        <section id="service" className="flex flex-col py-16 px-6 lg:px-24 gap-16 bg-gradient-to-b from-[#f5f5f5] via-white to-[#f5f5f5]">
+        <section id="service" className="flex flex-col py-16 px-6 lg:px-24 gap-16 bg-gradient-to-r from-[#f5f5f5] via-white to-accent">
 
             <div className="flex flex-col gap-6 text-center max-w-4xl mx-auto">
                 <h2 className="text-accent font-bold text-[32px] lg:text-[48px]">{data.titreh2}</h2>
