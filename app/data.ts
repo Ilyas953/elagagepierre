@@ -3,7 +3,7 @@ export const data = {
     fonction:["élagage"],
     url:"https://Pierre-elagage.fr",
     name:'Pierre Rudy',
-    email:'pierrerudy1987@gmail.com',
+    email:'contact@elagagepierre.fr',
     numero:'06 06 77 65 87',
     adresse:"10 route d'eragny 95480 Pierrelaye",
     zone:['ile de france',"Val d'oise", "oise", "pierrelaye","yvelines"],
