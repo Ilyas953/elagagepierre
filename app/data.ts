@@ -1,7 +1,7 @@
 export const data = {
     entreprise:"Elagage Pierre",
     fonction:["élagage"],
-    url:"https://Pierre-elagage.fr",
+    url:"https://elagagepierre.fr",
     name:'Pierre Rudy',
     email:'contact@elagagepierre.fr',
     numero:'06 06 77 65 87',
