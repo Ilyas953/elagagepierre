@@ -25,7 +25,7 @@ export const data = {
         commentaire:"Je recommande vivement Monsieur Pierre pour ses services d'élagage. C'est un élagueur très professionnel, ponctuel et soigneux dans son travail."
     },
 ],
-    deschero:"Pierre Rudy est votre elagueur de confiance à Pierrelaye et a  ses alentours. Spécialiste en abattages extremes, nous assurons un service fiable pour vos arbres Obtenez un devis gratuit dès aujourd’hui et profitez d’une intervention rapide et professionnelle.",
+    deschero:"Pierre Rudy est votre élagueur de confiance à Pierrelaye et à ses alentours. Spécialiste en abattages extrêmes, nous assurons un service fiable pour vos arbres. Obtenez un devis gratuit dès aujourd’hui et profitez d’une intervention rapide et professionnelle.",
     soustitreh2:"Fort de 20 ans d'expérience dans l'élagage, Nous intervenons à Pierrelaye et dans tout le Val-d'Oise pour prendre en charge l'ensemble de vos travaux arboricoles. Spécialisé dans les abattages extrêmes et les interventions en milieu difficile, il met son expertise au service des particuliers comme des professionnels. Soucieux du travail bien fait, Pierre Rudy vous garantit une intervention soignée, sécurisée et dans les règles de l'art. Contactez-le dès aujourd'hui pour un devis gratuit et sans engagement.",
     textservice:"Nous proposons une gamme complète de services pour l'entretien et l'aménagement de vos espaces verts à Pierrelaye et dans le Val-d'Oise. Élagage, abattage d'arbres classique ou extrême en milieu difficile, taille de haie, pose de clôture et remise en état de jardin — chaque prestation est réalisée avec soin et professionnalisme. Que vous soyez particulier ou professionnel, Pierre Rudy s'adapte à vos besoins et intervient rapidement pour un résultat impeccable.",
     pourquoichoisir:"Choisir Pierre Elagage, c'est faire confiance à un élagueur certifié avec 20 ans d'expérience dans le Val-d'Oise. Basé à Pierrelaye, il intervient rapidement chez vous pour tous vos travaux arboricoles, des plus simples aux plus complexes. Spécialisé dans les abattages extrêmes et les interventions en hauteur, Nous maîtrisons les techniques les plus exigeantes pour garantir votre sécurité et celle de vos biens. Chaque chantier est réalisé dans le respect des normes en vigueur, avec un matériel professionnel et entretenu. Devis gratuit, tarifs transparents et intervention rapide — la tranquillité d'esprit est comprise dans la prestation.",
@@ -33,7 +33,7 @@ export const data = {
     photo1:"/photo1.jpeg",
     altphoto1:"élagueur pierre en train d'abattre un arbre",
     photo2:"/fondcontact.jpeg",
-    altphoto2:"fin d'un chantier d'elagage",
+    altphoto2:"fin d'un chantier d'élagage à Pierrelaye",
     photofondcontact:"/fondcontact.jpeg",
 
 
