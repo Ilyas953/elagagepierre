@@ -163,24 +163,29 @@ export function Header() {
             </div>
 
 
-            <div className="flex flex-row gap-[16px] justify-center items-center  ">
-                <a href={`tel:${data.numero}`}>
-                <SecondBouton className="text-white absolute border-white z-[90] left-0 top-full w-full h-full  lg:w-auto bg-accent lg:bg-accent/0 lg:static">
+            <div className="flex flex-row gap-[16px] justify-center items-center">
+                <a href={`tel:${data.numero}`} className="hidden lg:block">
+                <SecondBouton className="text-white border-accent">
                 <Icon icon='material-symbols:call' width={24} height={24}/>
-                <p className="font-extrabold text-[16px]  ">{data.numero}</p>
+                <p className="font-extrabold text-[16px]">{data.numero}</p>
                 </SecondBouton>
                 </a>
                 <Link href="#contact">
-                <Bouton className="items-center opacity-0 lg:opacity-100 h-full ">
+                <Bouton className="items-center opacity-0 lg:opacity-100 h-full">
                     <Icon icon='material-symbols:mail' width={24} height={24} className="text-white"/>
-                <p className=" text-[16px] font-semibold  ">Devis gratuit</p>
+                <p className=" text-[16px] font-semibold">Devis gratuit</p>
                 </Bouton>
                 </Link>
             </div>
-            
-        <button onClick={() => setBurger(true)} className="lg:hidden"> <Icon icon="qlementine-icons:menu-burger-16" className={ `${ !burger ? 'opacity-100': 'opacity-0'}  lg:hidden w-[44px] h-11 text-second`} /></button>
-        
+
+        <button onClick={() => setBurger(true)} className="lg:hidden bg-accent rounded-[8px] w-[44px] h-[44px] flex items-center justify-center shrink-0"><Icon icon="qlementine-icons:menu-burger-16" className={`${!burger ? 'opacity-100' : 'opacity-0'} w-[24px] h-[24px] text-white`} /></button>
+
      </div>
+
+     <a href={`tel:${data.numero}`} className="lg:hidden fixed bottom-0 left-0 w-full z-[90] flex items-center justify-center gap-2 bg-accent text-white py-[14px] border-t border-white/20">
+         <Icon icon='material-symbols:call' width={20} height={20}/>
+         <p className="font-extrabold text-[14px]">{data.numero}</p>
+     </a>
 
      {burger && <div className=" fixed top-0 left-0  inset h-screen z-30 w-screen flex flex-col justify-center items-center px-8 py-8 bg-black/85 text-white">
                 <div className=" self-end justify-self-start flex flex-row items-end "><button onClick={() => setBurger(false)}><Icon icon="akar-icons:cross" className="relative   w-[44px] h-11 text-second " /></button></div>
