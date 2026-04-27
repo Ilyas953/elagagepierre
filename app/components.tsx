@@ -115,7 +115,7 @@ export function Hero2() {
     transition={{ duration: 0.5 }}
     viewport={{ once: true }}
 
-    className=" lg:text-start row-start-1 lg:row-start-6 col-span-full lg:col-span-7 justify-center items-center lg:items-start flex flex-col gap-[48px] py-[124px] lg:py-[32px] lg:px-[48px] z-20">
+    className="  lg:text-start row-start-1 lg:row-start-6 col-span-full lg:col-span-7 justify-center items-center lg:items-start flex flex-col gap-[48px] py-[124px] lg:py-[32px] lg:px-[48px] z-20">
                 <div className="flex flex-col gap-[16px] lg:max-w-7xl">
             <h1 className=" text-white  text-[32px] lg:text-[48px] font-extrabold text-center lg:text-start justify-center">{data.titreh1}</h1>
             <p className="text-[24px] text-[#E6E6E6] font-semibold text-center lg:text-start">{data.soustitrehero}</p>
@@ -165,17 +165,11 @@ export function Header() {
             </div>
 
 
-            <div className="flex flex-row gap-[16px] justify-center items-center  ">
-                <a href={`tel:${data.numero}`}>
-                <SecondBouton className="text-white absolute border-white z-[90] left-0 top-full w-full h-full  lg:w-auto bg-accent lg:bg-accent/0 lg:static">
-                <Icon icon='material-symbols:call' width={24} height={24}/>
-                <p className="font-extrabold text-[16px]  ">{data.numero}</p>
-                </SecondBouton>
-                </a>
+            <div className="flex flex-row gap-[16px] justify-center items-center">
                 <Link href="#contact">
-                <Bouton className="items-center opacity-0 lg:opacity-100 h-full ">
+                <Bouton className="items-center opacity-0 lg:opacity-100">
                     <Icon icon='material-symbols:mail' width={24} height={24} className="text-white"/>
-                <p className=" text-[16px] font-semibold  ">Devis gratuit</p>
+                <p className="text-[16px] font-semibold">Devis gratuit</p>
                 </Bouton>
                 </Link>
             </div>
@@ -197,6 +191,11 @@ export function Header() {
         
         }
         </nav>
+
+        <a href={`tel:${data.numero}`} className="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-accent flex flex-row items-center justify-center gap-3 py-3 text-white">
+            <Icon icon='material-symbols:call' width={18} height={18}/>
+            <p className="font-bold text-[14px]">{data.numero}</p>
+        </a>
      </>
 
     )
