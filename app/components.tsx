@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { ReactNode, useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Inknut_Antiqua } from "next/font/google";
+
 import { data } from "./data";
 import { ContactForm } from "./Formdevis";
 
@@ -85,10 +85,6 @@ export function Section({className, children}: boutonprops) {
 
 
 
-const aboreto = Inknut_Antiqua({
-    style:"normal",
-    weight: "400"
-  });
 
 export function Hero2() {
 
@@ -97,14 +93,16 @@ export function Hero2() {
 
     return (
         <>
-        <header id="accueil" className="relative h-auto lg:h-screen grid grid-cols-12 lg:grid-rows-12 w-full px-[32px]  ">
+        <header id="accueil" className="relative h-auto grid grid-cols-12 w-full px-[32px]">
 
       <Image
         src="/fongui.jpeg"
-        alt="elagueur pierre sur une taille de haie"
+        alt="élagueur Pierre Rudy sur une taille de haie à Pierrelaye"
         fill
         priority
-        className="object-cover object-bottom"
+        quality={75}
+        sizes="100vw"
+        className="object-cover object-bottom "
       />
 
       <div className="absolute inset-0 bg-black/60" />
@@ -115,12 +113,12 @@ export function Hero2() {
     transition={{ duration: 0.5 }}
     viewport={{ once: true }}
 
-    className="  lg:text-start row-start-1 lg:row-start-6 col-span-full lg:col-span-7 justify-center items-center lg:items-start flex flex-col gap-[48px] py-[124px] lg:py-[32px] lg:px-[48px] z-20">
+    className=" min-h-screen lg:text-start col-span-full lg:col-span-7 items-center lg:items-start flex flex-col gap-[48px] py-[124px] lg:py-[96px] lg:px-[32px] z-20 lg:col-start-1">
                 <div className="flex flex-col gap-[16px] lg:max-w-7xl">
             <h1 className=" text-white  text-[32px] lg:text-[48px] font-extrabold text-center lg:text-start justify-center">{data.titreh1}</h1>
             <p className="text-[24px] text-[#E6E6E6] font-semibold text-center lg:text-start">{data.soustitrehero}</p>
             </div>
-            <div className="flex flex-col lg:flex-row justify-center items-center  gap-[24px]">
+            <div className="flex flex-col lg:flex-row justify-center lg:justify-start items-center lg:items-start gap-[24px]">
                 <Link href={`tel:${data.numero}`} className="h-full"><Bouton className="h-full">
                         <Icon icon='material-symbols:call' width={24} height={24} className="text-white"/>
                 <p className=" text-[16px] font-semibold text-white ">Appeler Maintenant</p>
@@ -157,32 +155,43 @@ export function Header() {
      <>
      <nav>
      <div className={`col-span-full w-full fixed px-[32px] py-[24px] top-0 left-0 z-50 flex flex-row items-center justify-between text-white transition-all duration-300 ${scrolled ? "backdrop-blur-md" : ""}`}>
-        <p className={`text-2xl text-[#2CC817] font-extrabold  ${aboreto.className} `}>{data.entreprise}</p>
+        <p className={`text-2xl text-[#2CC817] font-extrabold  font-[family-name:var(--font-inknut-antiqua)]`}>{data.entreprise}</p>
             <div className="hidden lg:flex flex-row gap-8 text-[16px] ">
                 <Link href="#accueil"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">Accueil <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
-                <Link href="#service"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">a propos <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
+                <Link href="#service"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">À propos <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
                 <Link href="#contact"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out">Contact <span className=" transition-all duration-300 ease-in-out border-accent border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
             </div>
 
 
             <div className="flex flex-row gap-[16px] justify-center items-center">
+                <a href={`tel:${data.numero}`} className="hidden lg:block">
+                <SecondBouton className="text-white border-accent">
+                <Icon icon='material-symbols:call' width={24} height={24}/>
+                <p className="font-extrabold text-[16px]">{data.numero}</p>
+                </SecondBouton>
+                </a>
                 <Link href="#contact">
-                <Bouton className="items-center opacity-0 lg:opacity-100">
+                <Bouton className="items-center opacity-0 lg:opacity-100 h-full">
                     <Icon icon='material-symbols:mail' width={24} height={24} className="text-white"/>
-                <p className="text-[16px] font-semibold">Devis gratuit</p>
+                <p className=" text-[16px] font-semibold">Devis gratuit</p>
                 </Bouton>
                 </Link>
             </div>
-            
-        <button onClick={() => setBurger(true)} className="lg:hidden"> <Icon icon="qlementine-icons:menu-burger-16" className={ `${ !burger ? 'opacity-100': 'opacity-0'}  lg:hidden w-[44px] h-11 text-second`} /></button>
-        
+
+        <button onClick={() => setBurger(true)} className="lg:hidden bg-accent rounded-[8px] w-[44px] h-[44px] flex items-center justify-center shrink-0"><Icon icon="qlementine-icons:menu-burger-16" className={`${!burger ? 'opacity-100' : 'opacity-0'} w-[24px] h-[24px] text-white`} /></button>
+
      </div>
+
+     <a href={`tel:${data.numero}`} className="lg:hidden fixed bottom-0 left-0 w-full z-[90] flex items-center justify-center gap-2 bg-accent text-white py-[14px] border-t border-white/20">
+         <Icon icon='material-symbols:call' width={20} height={20}/>
+         <p className="font-extrabold text-[14px]">{data.numero}</p>
+     </a>
 
      {burger && <div className=" fixed top-0 left-0  inset h-screen z-30 w-screen flex flex-col justify-center items-center px-8 py-8 bg-black/85 text-white">
                 <div className=" self-end justify-self-start flex flex-row items-end "><button onClick={() => setBurger(false)}><Icon icon="akar-icons:cross" className="relative   w-[44px] h-11 text-second " /></button></div>
                  <div className=" row-start-1 mt-20 ml-10 col-span-full text-center items-center flex flex-col gap-8 text-[24px] font-semibold ">
                 <Link href="#accueil"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out" onClick={()=> setBurger(false)}>Accueil <span className=" transition-all duration-300 ease-in-out border-violet-500 border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
-                <Link href="#service"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out" onClick={()=> setBurger(false)}>A propos <span className=" transition-all duration-300 ease-in-out border-violet-500 border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
+                <Link href="#service"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out" onClick={()=> setBurger(false)}>À propos <span className=" transition-all duration-300 ease-in-out border-violet-500 border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
                 <Link href="#contact"><div className="flex flex-col gap-1 group transition-all duration-500 ease-in-out" onClick={()=> setBurger(false)}>Contact <span className=" transition-all duration-300 ease-in-out border-violet-500 border-1 w-0 opacity-0 group-hover:w-full group-hover:opacity-100"></span> </div></Link>
                 
             </div>
@@ -191,11 +200,6 @@ export function Header() {
         
         }
         </nav>
-
-        <a href={`tel:${data.numero}`} className="lg:hidden fixed bottom-0 left-0 w-full z-50 bg-accent flex flex-row items-center justify-center gap-3 py-3 text-white">
-            <Icon icon='material-symbols:call' width={18} height={18}/>
-            <p className="font-bold text-[14px]">{data.numero}</p>
-        </a>
      </>
 
     )
@@ -214,7 +218,7 @@ export function About() {
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 items-center max-w-5xl mx-auto w-full">
-                <Image src={data.photo1} alt={data.altphoto1} width={320} height={337} className="object-cover object-bottom rounded-lg shrink-0" />
+                <Image src={data.photo1} alt={data.altphoto1} width={320} height={337} quality={75} className="object-cover object-bottom rounded-lg shrink-0" />
                 <div className="flex flex-col gap-4">
                     <p className="text-accent font-bold text-[24px]">Nos Services</p>
                     <p className="text-[16px] text-text">{data.textservice}</p>
@@ -226,7 +230,7 @@ export function About() {
                     <p className="text-accent font-bold text-[24px]">Pourquoi nous choisir</p>
                     <p className="text-[16px] text-text">{data.pourquoichoisir}</p>
                 </div>
-                <Image src={data.photo2} alt={data.altphoto2} width={320} height={337} className="object-cover object-bottom rounded-lg shrink-0" />
+                <Image src={data.photo2} alt={data.altphoto2} width={320} height={337} quality={75} className="object-cover object-bottom rounded-lg shrink-0" />
             </div>
 
         </section>
@@ -294,9 +298,11 @@ export function Contact() {
         
       <Image
         src="/fongui.jpeg"
-        alt="elagueur pierre sur une taille de haie"
+        alt="élagueur Pierre Rudy sur une taille de haie à Pierrelaye"
         fill
         priority
+        quality={75}
+        sizes="100vw"
         className="object-cover object-bottom"
       />
     <div className="absolute inset-0 bg-black/60" />
@@ -367,7 +373,7 @@ export function Footer() {
                  <div className="text-white font-semibold text-2xl flex flex-col gap-6 text-center">
                      <p className="text-white text-[32px]">Navigation</p>
                       <a href="#accueil">Accueil</a>
-                       <a href="#service">A propos</a> <a href="#contact">Contact</a>
+                       <a href="#service">À propos</a><a href="#contact">Contact</a>
                         </div>
                          <div className="bg-second/50 w-full h-px lg:h-65 lg:w-0.5  "></div>
                         <div className="text-white font-semibold text-2xl flex flex-col gap-6 text-center">
