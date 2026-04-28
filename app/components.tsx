@@ -220,14 +220,14 @@ export function About() {
             <div className="flex flex-col lg:flex-row gap-8 items-center max-w-5xl mx-auto w-full">
                 <Image src={data.photo1} alt={data.altphoto1} width={320} height={337} quality={75} className="object-cover object-bottom rounded-lg shrink-0" />
                 <div className="flex flex-col gap-4">
-                    <p className="text-accent font-bold text-[24px]">Nos Services</p>
+                    <h3 className="text-accent font-bold text-[24px]">Nos Services</h3>
                     <p className="text-[16px] text-text">{data.textservice}</p>
                 </div>
             </div>
 
             <div className="flex flex-col lg:flex-row gap-8 items-center max-w-5xl mx-auto w-full">
                 <div className="flex flex-col gap-4">
-                    <p className="text-accent font-bold text-[24px]">Pourquoi nous choisir</p>
+                    <h3 className="text-accent font-bold text-[24px]">Pourquoi nous choisir</h3>
                     <p className="text-[16px] text-text">{data.pourquoichoisir}</p>
                 </div>
                 <Image src={data.photo2} alt={data.altphoto2} width={320} height={337} quality={75} className="object-cover object-bottom rounded-lg shrink-0" />
@@ -315,7 +315,7 @@ export function Contact() {
     viewport={{ once: true }}
      className="row-start-1 lg:row-start-6 col-span-full w-full justify-center items-center flex flex-col gap-[48px]  z-80">
                 <div className="flex flex-col gap-[16px] text-center">
-                    <h2 className="font-extrabold text-[32px]">Prêt à démarrer votre projet ?</h2>
+                    <h2 className="font-extrabold text-[32px]">Demandez votre devis gratuit — Élagueur à Pierrelaye (95)</h2>
                     <p className="font-semibold text-[24px]">Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement. Notre équipe est à votre disposition pour étudier votre projet et vous proposer les meilleures solutions adaptées à vos besoins.</p>
             </div>
             <div className="flex flex-col gap-[24px] lg:flex-row ">
