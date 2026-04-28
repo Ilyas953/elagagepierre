@@ -107,11 +107,10 @@ export function Hero2() {
 
       <div className="absolute inset-0 bg-black/60" />
             <Header />
-            <motion.div 
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
+            <motion.div
+    initial={{ opacity: 1, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
-    viewport={{ once: true }}
 
     className=" min-h-screen lg:text-start col-span-full lg:col-span-7 items-center lg:items-start flex flex-col gap-[48px] py-[124px] lg:py-[96px] lg:px-[32px] z-20 lg:col-start-1">
                 <div className="flex flex-col gap-[16px] lg:max-w-7xl">
@@ -309,11 +308,12 @@ export function Contact() {
 
 
 
-            <motion.div initial={{ opacity: 0, y: 10 }}
+            <motion.div
+    initial={{ opacity: 0, y: 10 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
     viewport={{ once: true }}
-     className="row-start-1 lg:row-start-6 col-span-full w-full justify-center items-center flex flex-col gap-[48px]  z-80">
+    className="row-start-1 lg:row-start-6 col-span-full w-full justify-center items-center flex flex-col gap-[48px]  z-80">
                 <div className="flex flex-col gap-[16px] text-center">
                     <h2 className="font-extrabold text-[32px]">Demandez votre devis gratuit — Élagueur à Pierrelaye (95)</h2>
                     <p className="font-semibold text-[24px]">Contactez-nous dès aujourd'hui pour un devis gratuit et sans engagement. Notre équipe est à votre disposition pour étudier votre projet et vous proposer les meilleures solutions adaptées à vos besoins.</p>
